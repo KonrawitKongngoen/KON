@@ -1,12 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function Corasel() {
   useEffect(() => {
-    // ดึง Bootstrap JS เฉพาะตอนฝั่ง client
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
   return (
