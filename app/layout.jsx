@@ -1,6 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,18 +26,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-gray-900">Korawit</span>
-          </div>
-          <div className="flex space-x-6">
-            <Link href="/" className="text-gray-700 hover:text-blue-600 transition">Home</Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 transition">Services</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition">Contact</Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">About</Link>
-          </div>
-        </nav>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
