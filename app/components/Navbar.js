@@ -3,7 +3,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="/">
           Navbar
         </Link>
         <button
@@ -20,13 +20,13 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" href="/">
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#">
-                Link
+              <Link className="nav-link" href="/about">
+                About
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -41,21 +41,21 @@ export default function Navbar() {
               </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    Action
+                  <Link className="dropdown-item" href="/components">
+                    components
                   </Link>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    Another action
+                  <Link className="dropdown-item" href="/contact">
+                    contact
                   </Link>
                 </li>
                 <li>
-                  <hr className="dropdown-divider" />
+                  <hr className="dropdown-divider"/>
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
-                    Something else here
+                  <Link className="dropdown-item" href="/services">
+                    services
                   </Link>
                 </li>
               </ul>
@@ -77,3 +77,4 @@ export default function Navbar() {
     </nav>
   );
 }
+   
